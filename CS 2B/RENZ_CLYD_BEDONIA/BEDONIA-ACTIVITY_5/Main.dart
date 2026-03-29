@@ -20,7 +20,7 @@ void main() {
   print("=== Welcome to the Zoo ===\n");
 
   // CONCEPT 4: Looping. Using a for loop to iterate through the Zoo data.
-  print("This zoo is filled with diverse creatures!");
+  print("This zoo is filled with diverse creatures!\n");
   for (Animal currentAnimal in ZOO) {
     currentAnimal.displayInfo();
   }

@@ -42,10 +42,14 @@ class Animal {
 
   // Function for displaying animal info
   void displayInfo() {
-    print("\n========== Animal Info =========");
-    print("Name:             $name");
-    print("Kingdom:          $kingdom");
-    print("Date of Birth:    $dob");
-    print("Number of Legs:   $numLegs");
+    String info =
+        """
+========== Animal Info =========
+Name:             $name
+Kingdom:          $kingdom
+Date of Birth:    $dob
+Number of Legs:   $numLegs
+""";
+    print(info);
   }
 }
