@@ -14,7 +14,7 @@ class Pet extends Animal {
   // Constructor excluding pet nickname
   Pet(super.name, super.kingdom, super.dob, super.numLegs, this.kindnessValue);
 
-  // Constructor including pet nickname
+  // CONCEPT 10: Named Constructors. A Pet constructor that requires a nickname.
   Pet.requiringNickName(
     super.name,
     super.kingdom,

@@ -1,16 +1,17 @@
 // Animal Class
 
-// Animal Class attributes
+// CONCEPT 5: Constructing Classes. Building the blueprint for the Animal.
 class Animal {
+  // CONCEPT 6: Data Types. Variable declaration using Strings and Integers.
   String name;
   String kingdom;
   String dob;
   int numLegs;
 
-  // Animal constructor
+  // CONCEPT 7: Constructor Shorthand. The parameters are automatically assigned using "this.".
   Animal(this.name, this.kingdom, this.dob, this.numLegs);
 
-  // Map for directions
+  // CONCEPT 8: Map<foo, bar>. Maps the movement and response for the chosen direction.
   Map<String, String> movements = {
     "forward": "moved forward",
     "back": "moved back",
@@ -22,7 +23,7 @@ class Animal {
 
   // Function for animal walk
   void walk(String direction) {
-    // Checks if animal can walk
+    // CONCEPT 9: Conditionals. Using a traditional if/else statement to check for the no. of legs.
     if (numLegs <= 0) {
       print("There seems to be a mistake, the $name cannot walk.");
       return;

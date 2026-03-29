@@ -2,11 +2,12 @@
 import 'Animal.dart';
 import 'Pet.dart';
 
-// Main function
+// CONCEPT 1: Entry Point. Every app must have a top-level main() function, which is the entry point to the app.
 void main() {
   // -- The Zoo --
 
-  // Zoo list
+  // CONCEPT 2: Lists and Arrays. Using Lists to hold multiple objects.
+  // CONCEPT 3: No more "this" and that. Did not use of the new keyword when instantiating the Animal class (e.g., Animal(...) instead of new Animal(...)).
   List<Animal> ZOO = [
     Animal("Barbary Lion", "Chordate", "2010", 4),
     Animal("Red-Eyed Tree Frog", "Chordate", "2019", 4),
@@ -18,6 +19,7 @@ void main() {
   // Zoo iteration
   print("=== Welcome to the Zoo ===\n");
 
+  // CONCEPT 4: Looping. Using a for loop to iterate through the Zoo data.
   print("This zoo is filled with diverse creatures!");
   for (Animal currentAnimal in ZOO) {
     currentAnimal.displayInfo();
