@@ -24,7 +24,7 @@ class Animal {
   void walk(String direction) {
     // Checks if animal can walk
     if (numLegs <= 0) {
-      print("There seems to have a mistake, the $name cannot walk.");
+      print("There seems to be a mistake, the $name cannot walk.");
       return;
     }
 

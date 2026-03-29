@@ -50,7 +50,7 @@ void main() {
   PET_HOME[0].kick(50);
 
   // Increasing the kindness value of Grumpy and Mittens
-  print("=== Decreasing Kindness ===\n");
+  print("=== Increasing Kindness ===\n");
   PET_HOME[1].pet(1100);
   PET_HOME[2].play(1400);
 }
