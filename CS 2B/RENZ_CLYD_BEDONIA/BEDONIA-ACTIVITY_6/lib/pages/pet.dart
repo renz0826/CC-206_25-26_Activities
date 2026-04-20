@@ -7,10 +7,11 @@ class Pet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.topCenter,
-      child: SingleChildScrollView(
+    return SingleChildScrollView(
+      child: SizedBox(
+        width: double.infinity,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             const SizedBox(height: 32),
 
