@@ -28,6 +28,7 @@ class Profile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 24),
                   width: 160,
                   height: 160,
                   decoration: BoxDecoration(
@@ -84,94 +85,147 @@ class Profile extends StatelessWidget {
                   ],
                 ),
 
-                child: Column(
-                  children: [
-                    // --- ROW 1 ---
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    final isWide = constraints.maxWidth > 600;
+                    return Column(
                       children: [
-                        // Birthday
-                        Expanded(
-                          child: _buildInfoItem(
+                        // --- ROW 1 ---
+                        if (isWide)
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // Birthday
+                              Expanded(
+                                child: _buildInfoItem(
+                                  context,
+                                  icon: Icons.cake,
+                                  title: "Birthday",
+                                  value: "August 26, 2006",
+                                ),
+                              ),
+
+                              const SizedBox(width: 50),
+
+                              // Email
+                              Expanded(
+                                child: _buildInfoItem(
+                                  context,
+                                  icon: Icons.mail,
+                                  title: "Email",
+                                  value: "renzclyd.bedonia@wvsu.edu.ph",
+                                ),
+                              ),
+                            ],
+                          )
+                        else ...[
+                          _buildInfoItem(
                             context,
                             icon: Icons.cake,
                             title: "Birthday",
                             value: "August 26, 2006",
                           ),
-                        ),
-
-                        const SizedBox(width: 50),
-
-                        // Email
-                        Expanded(
-                          child: _buildInfoItem(
+                          const SizedBox(height: 16),
+                          _buildInfoItem(
                             context,
                             icon: Icons.mail,
                             title: "Email",
                             value: "renzclyd.bedonia@wvsu.edu.ph",
                           ),
-                        ),
-                      ],
-                    ),
+                        ],
 
-                    const SizedBox(height: 32),
+                        const SizedBox(height: 32),
 
-                    // --- ROW 2 ---
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        // Address
-                        Expanded(
-                          child: _buildInfoItem(
+                        // --- ROW 2 ---
+                        if (isWide)
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // Address
+                              Expanded(
+                                child: _buildInfoItem(
+                                  context,
+                                  icon: Icons.home,
+                                  title: "Address",
+                                  value: "Tubungan, Barotac Nuevo",
+                                ),
+                              ),
+                              const SizedBox(width: 50),
+                              // Phone
+                              Expanded(
+                                child: _buildInfoItem(
+                                  context,
+                                  icon: Icons.phone,
+                                  title: "Phone Number",
+                                  value: "09512367680",
+                                ),
+                              ),
+                            ],
+                          )
+                        else ...[
+                          _buildInfoItem(
                             context,
                             icon: Icons.home,
                             title: "Address",
                             value: "Tubungan, Barotac Nuevo",
                           ),
-                        ),
-                        const SizedBox(width: 50),
-                        // Phone
-                        Expanded(
-                          child: _buildInfoItem(
+                          const SizedBox(height: 16),
+                          _buildInfoItem(
                             context,
                             icon: Icons.phone,
                             title: "Phone Number",
                             value: "09512367680",
                           ),
-                        ),
-                      ],
-                    ),
+                        ],
 
-                    const SizedBox(height: 32),
+                        const SizedBox(height: 32),
 
-                    // --- ROW 3 ---
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        // University
-                        Expanded(
-                          child: _buildInfoItem(
+                        // --- ROW 3 ---
+                        if (isWide)
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // University
+                              Expanded(
+                                child: _buildInfoItem(
+                                  context,
+                                  icon: Icons.school_rounded,
+                                  title: "University",
+                                  value: "West Visayas State University",
+                                ),
+                              ),
+
+                              const SizedBox(width: 50),
+
+                              // Hobbies
+                              Expanded(
+                                child: _buildInfoItem(
+                                  context,
+                                  icon: Icons.favorite,
+                                  title: "Hobbies",
+                                  value: "Video Games, Designing, Working Out",
+                                ),
+                              ),
+                            ],
+                          )
+                        else ...[
+                          _buildInfoItem(
                             context,
                             icon: Icons.school_rounded,
                             title: "University",
                             value: "West Visayas State University",
                           ),
-                        ),
-
-                        const SizedBox(width: 50),
-
-                        // Hobbies
-                        Expanded(
-                          child: _buildInfoItem(
+                          const SizedBox(height: 16),
+                          _buildInfoItem(
                             context,
                             icon: Icons.favorite,
                             title: "Hobbies",
                             value: "Video Games, Designing, Working Out",
                           ),
-                        ),
+                        ],
                       ],
-                    ),
-                  ],
+                    );
+                  },
                 ),
               ),
             ),
