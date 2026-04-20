@@ -11,19 +11,16 @@ class MainTabBar extends StatelessWidget {
       length: 2,
       child: Scaffold(
         backgroundColor: Colors.white,
-        body: SafeArea(
-          child: Column(
-            children: [
-              TabBar(
-                tabs: const [
-                  Tab(text: 'My Profile', icon: Icon(Icons.person)),
-                  Tab(text: 'My Pet', icon: Icon(Icons.pets)),
-                ],
-              ),
-              const Expanded(child: TabBarView(children: [Profile(), Pet()])),
+        appBar: AppBar(
+          title: Center(child: Text("Renz Clyd D. Bedonia")),
+          bottom: const TabBar(
+            tabs: [
+              Tab(text: 'My Profile', icon: Icon(Icons.person)),
+              Tab(text: 'My Pet', icon: Icon(Icons.pets)),
             ],
           ),
         ),
+        body: const TabBarView(children: [Profile(), Pet()]),
       ),
     );
   }
