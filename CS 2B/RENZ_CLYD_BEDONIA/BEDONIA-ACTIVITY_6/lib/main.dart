@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/profile.dart';
-import 'pages/pet.dart';
+import 'widgets/tab_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +36,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+      home: MainTabBar(),
     );
   }
 }
