@@ -95,7 +95,7 @@ class Pet extends StatelessWidget {
 
                     const SizedBox(height: 16),
 
-                    SoundButton(),
+                    const SoundButton(),
                   ],
                 ),
               ),
