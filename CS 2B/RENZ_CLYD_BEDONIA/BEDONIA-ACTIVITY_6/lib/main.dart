@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'widgets/tab_bar.dart';
+import 'package:simpe_flutter_application/style/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+      theme: AppTheme.lightTheme,
       home: MainTabBar(),
     );
   }
