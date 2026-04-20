@@ -268,7 +268,7 @@ class Profile extends StatelessWidget {
                     const SizedBox(height: 16),
 
                     Text(
-                      ("Hello there! I am Renz Clyd Bedonia, a UI/UX and Graphic Designer who thrives on turning complex user problems into aesthetic, high-fidelity solutions. I am currently a student at West Visayas State University's College of Information and Communications Technology, where I focus on system architecture and cross-platform development. My work is driven by a commitment to functional, user-centric design that bridges the gap between technical requirements and a seamless visual experience."),
+                      "Hello there! I am Renz Clyd Bedonia, a UI/UX and Graphic Designer who thrives on turning complex user problems into aesthetic, high-fidelity solutions. I am currently a student at West Visayas State University's College of Information and Communications Technology, where I focus on system architecture and cross-platform development. My work is driven by a commitment to functional, user-centric design that bridges the gap between technical requirements and a seamless visual experience.",
                       style: Theme.of(context).textTheme.bodyMedium,
                     ),
                   ],
@@ -278,9 +278,13 @@ class Profile extends StatelessWidget {
 
             const SizedBox(height: 32),
 
-            Text(
-              "This application is made by Renz Clyd D. Bedonia for the compliance of Actvity 6 - Application Development.",
-              style: Theme.of(context).textTheme.bodySmall,
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Text(
+                "This application is made by Renz Clyd D. Bedonia for the compliance of Actvity 6 - Application Development.",
+                style: Theme.of(context).textTheme.bodySmall,
+                textAlign: TextAlign.center,
+              ),
             ),
 
             const SizedBox(height: 32),

@@ -101,9 +101,13 @@ class Pet extends StatelessWidget {
             ),
             const SizedBox(height: 32),
 
-            Text(
-              "This application is made by Renz Clyd D. Bedonia for the compliance of Actvity 6 - Application Development.",
-              style: Theme.of(context).textTheme.bodySmall,
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Text(
+                "This application is made by Renz Clyd D. Bedonia for the compliance of Actvity 6 - Application Development.",
+                style: Theme.of(context).textTheme.bodySmall,
+                textAlign: TextAlign.center,
+              ),
             ),
 
             const SizedBox(height: 32),
