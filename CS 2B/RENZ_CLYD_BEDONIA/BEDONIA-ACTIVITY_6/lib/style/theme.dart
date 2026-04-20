@@ -19,5 +19,15 @@ class AppTheme {
         labelLarge: GoogleFonts.roboto(fontSize: 14),
       ),
 
+      // TabBar Theme
+      tabBarTheme: TabBarThemeData(
+        labelColor: appGreen,
+        unselectedLabelColor: Colors.grey,
+        indicatorColor: appGreen,
+        overlayColor: WidgetStatePropertyAll(appGreen.withOpacity(0.1)),
+        labelStyle: GoogleFonts.inter(fontWeight: FontWeight.bold),
+        unselectedLabelStyle: GoogleFonts.inter(fontWeight: FontWeight.normal),
+      ),
+    );
   }
 }
