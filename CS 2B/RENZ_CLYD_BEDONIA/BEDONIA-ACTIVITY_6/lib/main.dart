@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "My Profile and Pet",
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       home: MainTabBar(),
